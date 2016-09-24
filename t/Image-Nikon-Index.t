@@ -22,12 +22,7 @@ $args{'suffix'} = 'NEF';
 $args{'folder'} = ".";
 
 my $n = Image::Nikon::Index->new (%args);
-my $list = $n->_list;
 
-foreach my $f (@$list) {
-	print $f,"\n";
-	$n->_file (file=>$f);
-}
-#$n->process;
+$n->process;
 
 done_testing();
